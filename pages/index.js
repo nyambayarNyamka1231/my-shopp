@@ -84,7 +84,7 @@ export default function Home({ usButsalgagches, plitkas }) {
               {data &&
                 data.map((plitkas) => {
                   const { ner, code, une } = plitkas?.attributes;
-                  return <Product ner={ner} code={code} une={une} />;
+                  return <Product ner={ner} code={code} une={une} key={ner} />;
                 })}
             </div>
           </div>
