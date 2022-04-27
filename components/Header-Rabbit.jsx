@@ -7,16 +7,19 @@ import {
   ShoppingCartIcon,
   UserIcon,
 } from "@heroicons/react/solid";
+import Link from "next/link";
 
 const HeaderRabbit = () => {
   return (
     <div className="flex justify-between items-center bg-white z-10  border-b border-b-gray-200 relative">
-      <div className="mx-auto flex justify-between items-center relative h-20 max-w-7xl w-full text-sky-400">
+      <div className="mx-auto flex justify-between items-center relative h-20 max-w-screen-2xl w-full text-sky-400">
         <div className="flex items-center">
           <button className=" py-2 px-3 z-30 ">
             <MenuAlt1Icon className="bg-white h-10 w-10 text-sky-400" />
           </button>
-          <a className="text-xl">Shoppy.mn</a>
+          <Link href="/">
+            <a className="text-xl">M&Shop.mn</a>
+          </Link>
         </div>
         <div className="mx-12  flex-grow flex-shrink basis-full relative">
           <div className="relative">

@@ -1,33 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
 const MenuContext = React.createContext();
 
 export const MenuProvider = (props) => {
+  const [menu, setMenu] = React.useState("");
+
+  const selectMenu = (selectedMenu) => {
+    setMenu(selectedMenu);
+  };
   return (
-    <MenuContext.Provider value={{ menu: "us" }}>
+    <MenuContext.Provider value={{ menu, selectMenu }}>
       {props.children}
     </MenuContext.Provider>
   );
 };
 
 export default MenuContext;
-
-// import React, { useState } from "react";
-
-// const ThemeContext = React.createContext();
-
-// export const ThemeProvider = (props) => {
-//   const [theme, setTheme] = useState(themes.light);
-
-//   const toggleTheme = () => {
-//     setTheme(theme === themes.light ? themes.dark : themes.light);
-//   };
-
-//   return (
-//     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-//       {props.children}
-//     </ThemeContext.Provider>
-//   );
-// };
-
-// export default ThemeContext;

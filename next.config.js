@@ -6,6 +6,9 @@ const nextConfig = {
     "@/lib/*": ["lib/*"],
     "@/styles/*": ["styles/*"],
   },
+  images: {
+    domains: ["cdn3.shoppy.mn"],
+  },
 };
 
 module.exports = nextConfig;
